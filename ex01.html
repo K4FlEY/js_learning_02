@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Buttons with color</title>
+
+</head>
+<body>
+<a href="ex02.html" class="bg-red-400  justify-center">GO to EX02</a>
+<a href="index.html" class="bg-red-400">Click to go to Home page</a>
+
+<a href="" class="bg-blue-400 flex justify-center">This is EX01</a><br>
+
+<div id="buttons" class="flex justify-center mt-24 gap-10 rounded-lg ">
+    <button onclick="play(this, 'red')">Click me for red</button>
+    <button onclick="play(this, 'blue')">Click me for blur</button>
+    <button onclick="play(this, 'pink')">Click me for pink</button>
+    <button onclick="play(this, 'yellow')">Click me for yellow</button>
+   
+</div>
+<script>
+function play(button, color){
+
+
+    let cc = button.style.backgroundColor
+    button.style.backgroundColor = cc === color ? 'white' : color;
+};
+  
+</script>
+
+<br><br>
+<br><br>
+
+
+<h3 class="flex justify-center bg-blue-300 align-middle">EX01- P02</h3>
+<div class="flex-col text-center bg-blue-200 mb-10"><h3>This is digital clock</h3> </div>
+
+
+<div class="p-4 bg-red-300 flex-col text-center">
+<div class="bg-orange-400 ">
+<label id="hours" class="p-5 bg-blue-50" >00</label>
+<label id="minutes" class="p-5 bg-blue-50">00</label>
+<label id="seconds" class="p-5 bg-blue-50" >00</label>
+</div>
+</div>
+</div>
+
+ 
+<script>
+
+function clock(){
+   let hours = document.getElementById("hours").innerHTML = new Date().getHours()
+  let  min =  document.getElementById("minutes").innerHTML = new Date().getMinutes()
+  let sec = document.getElementById("seconds").innerHTML = new Date().getSeconds()
+
+ 
+}
+setInterval(clock, 1000)
+clock();
+
+</script>
+
+
+
+<br><br>
+<br><br>
+
+
+<h3 class="flex justify-center bg-blue-300 align-middle">EX01- P03</h3>
+<h3 class="flex justify-center bg-blue-200 align-middle mb-10">This is increament, decrement and delete</h3>
+
+<label id="num" class=" flex text-center justify-center align-middle p-5 bg-slate-400">0</label>
+<div id="" class=" bg-slate-300 flex justify-center gap-16 mt-5">
+    <button onclick="increament()">Increament</button>
+    <button onclick="decreament()">Decrement</button>
+    <button onclick="remove()">Remove all</button>
+</div>
+</div>
+
+
+<script>
+
+    let num = JSON.parse(localStorage.getItem("number")) || 0;  
+    document.getElementById("num").innerHTML = num;
+
+    function increament(){
+        num++;
+        document.getElementById("num").innerHTML = num;
+        localStorage.setItem("number", JSON.stringify(num));
+    }
+
+    function decreament(){
+       
+
+        if (num === 0) return;
+        else if (num){
+            num--;
+        }
+        document.getElementById("num").innerHTML = num;
+        localStorage.setItem("number", JSON.stringify(num));
+     
+    }
+
+    function remove(){
+        num = 0;
+     document.getElementById("num").innerHTML = num;
+     localStorage.setItem("number", JSON.stringify(num));
+    }
+</script>
+
+<br><br>
+<br><br>
+<br><br>
+
+<h3 class="flex justify-center bg-blue-300 align-middle">EX01- P04</h3>
+<h3 class="flex justify-center bg-blue-200 align-middle mb-10">This is increament, decrement and delete</h3>
+
+
+</body>
+</html>

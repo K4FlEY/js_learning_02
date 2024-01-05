@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>add</title>
+</head>
+<body>
+    
+
+<a href="ex01.html" class="bg-slate-300 flex justify-center">Go to EX01</a>
+    <div id="ClickMe" class=" flex-col text-center mt-20 font-serif text-lg">
+        <h3>This is Home Page </h3>
+        <h3>Count passengers</h3>
+
+        <div id="totalNumbers" class="pt-2">
+
+        </div>
+    
+    <button onclick="count()" id="ClickMe" class="bg-slate-500 p-20 mt-36" >Click Me</button>
+    <button onclick="Delete()" id="Assign" class=" bg-slate-500">Delete</button>
+
+</div>
+
+
+
+<script>
+
+   let totalNumbers = 0;
+
+    function count (){
+    totalNumbers++; 
+  console.log(totalNumbers);
+  let total =  document.getElementById("totalNumbers").innerHTML = totalNumbers;
+}
+
+
+function Delete () {
+    totalNumbers = 0;
+    document.getElementById("totalNumbers").innerHTML = totalNumbers;
+
+  
+};
+
+
+
+
+</script>
+</body>
+</html>
