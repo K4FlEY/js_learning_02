@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex03</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3 class=" font-bold">This is ex 3</h3>
+
+    <p>Just trying digitalclock.</p>
+
+<div id="clock" class=" p-10 flex m-10 bg-blur-300">
+    <div class="gap-9 flex ">
+    
+ 
+       <p id="hr"></p>
+       <spam>Hour</spam>
+
+       <p id="min"></p>
+       <spam>Minute</spam>
+   
+       <p id="sec"></p>
+       <spam>Second</spam>
+
+
+       <p id="ampm"></p>
+    </div>
+</div>
+
+
+
+
+<script>
+
+    function clock() {
+    document.getElementById("hr").innerHTML = new Date().getHours()
+    document.getElementById("min").innerHTML = new Date().getMinutes()
+    document.getElementById("sec").innerHTML = new Date().getSeconds()
+    document.getElementById("ampm").innerHTML = new Date().getSeconds()
+        }
+setInterval(clock, 1000);
+  clock();
+
+
+    if ("hr">12 && "hr"<12 ){
+document.getElementById("ampm").innerHTML = "AM"
+    }
+    
+</script>
+</body>
+</html>
